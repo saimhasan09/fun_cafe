@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+<!-- static  -->
+{% load static %}
+<!-- title -->
+{% block title %} FUN CAFE {% endblock %}
+<!-- page content start here -->
+{% block content %}
+<h3 class="p-5 text-center">Meals Items</h3>
+<div class="container">
+  <div class="row">
+    {% for i in categories %}
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div class="card">
+        <img
+          src="{{ i.strCategoryThumb }}"
+          class="card-img-top"
+          alt="Meal Image"
+        />
+        <div class="card-body">
+          <h4>{{ i.idCategory }}</h4>
+          <h5 class="card-title">{{ i.strCategory }}</h5>
+          <p>{{ i.strCategoryDescription|truncatechars:20 }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endblock %}
+</div>

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+<!-- static  -->
+{% load static %}
+<!-- title -->
+{% block title %} ABOUT FUN CAFE {% endblock %}
+
+<!-- page content start here -->
+{% block content %}
+
+<section>
+  <div class="row">
+    <div class="col-lg-6 col-sm-12 mt-5 p-5 description">
+      <h5>
+        Welcome to our FUN CAFE, where every cup tells a story. Nestled in a
+        cozy corner, we invite you to indulge in the warmth of freshly brewed
+        coffee and artisanal treats.
+      </h5>
+    </div>
+    <div class="col-lg-6 col-sm-12">
+      <img
+        class="img-fluid w-100"
+        src="{% static 'about.jpg' %}"
+        alt=" about image"
+      />
+    </div>
+  </div>
+</section>
+
+{% endblock %}

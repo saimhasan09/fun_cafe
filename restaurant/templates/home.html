@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+<!-- static  -->
+{% load static %}
+<!-- title -->
+{% block title %} FUN CAFE {% endblock %}
+
+<!-- page content -->
+{% block content %}
+
+<section>
+  <div class="row">
+    <div class="col-lg-6 col-sm-12 mt-5 p-5 description">
+      <h2>Have wonderful food with us</h2>
+      <button class="btn btn-success">
+        <a class="text-decoration-none" href="{% url 'show_item'%}"
+          >Choos order</a
+        >
+      </button>
+    </div>
+    <div class="col-lg-6 col-sm-12">
+      <img src="{% static 'cafe_pic.jpg' %}" alt=" cafe picture" />
+    </div>
+  </div>
+</section>
+
+{% endblock %}
